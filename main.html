@@ -17,10 +17,11 @@
         }
         .col {
             border: 2px dotted rgb(38, 38, 43);
-            height: 100%; /* Make sure inner divs fill the column */
+            display: flex; /* Use flexbox for inner divs */
+            flex-direction: column; /* Stack inner divs vertically */
         }
         .inner-div {
-            height: 50%; /* Each inner div takes half of the column height */
+            flex: 1; /* Make inner divs take equal space */
         }
         .row1-col1 { background-color: teal; }
         .row1-col2 { background-color: thistle; }
@@ -65,8 +66,8 @@
                 <div class="inner-div">Inner Div 2</div>
             </div>
             <div class="col-md-4 text-center">
-                <div class="inner-div">Centered Inner Div</div>
-                <div class="inner-div">Centered Inner Div</div>
+                <div class="inner-div">Centered Inner Div 1</div>
+                <div class="inner-div">Centered Inner Div 2</div>
             </div>
         </div>
     </div>
