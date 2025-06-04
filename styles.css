@@ -1,2 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* Your CSS Code here. */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 800px;
+    height: 600px;
+    border: 10px solid #4CAF50;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex: 1;
+}
+
+.col {
+    padding: 10px;
+    color: #333;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Row 1 */
+.row1 .col1 {
+    flex: 1;
+    background-color: #008080; /* Teal */
+}
+
+.row1 .col2 {
+    flex: 1;
+    background-color: #DDA0DD; /* Plum */
+}
+
+/* Row 2 */
+.row2 .col1 {
+    flex: 2;
+    background-color: #FF6347; /* Tomato */
+    margin: 0 10px;
+}
+
+.row2 .col2 {
+    flex: 1;
+    background-color: #40E0D0; /* Turquoise */
+}
+
+.row2::before,
+.row2::after {
+    content: '';
+    width: 10px;
+    background-color: #3A0000; /* Dark brown */
+}
+
+/* Row 3 */
+.row3 .col1 {
+    flex: 1;
+    background-color: #FF69B4; /* Hot Pink */
+    margin-left: 10px;
+}
+
+.row3 .col2 {
+    flex: 1;
+    background-color: #90EE90; /* Light Green */
+    margin-right: 10px;
+}
+
+.row3::before,
+.row3::after {
+    content: '';
+    width: 10px;
+    background-color: #3A0000; /* Dark brown */
+}
+
+/* Text styling */
+.col {
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Gaps between rows */
+.row + .row {
+    margin-top: 2px;
+}
